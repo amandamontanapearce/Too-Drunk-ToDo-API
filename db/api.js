@@ -6,5 +6,8 @@ module.exports = {
   },
   addPerson: function(username, hashedpassword){
     return knex('person').insert({username: username, password: hashedpassword}, 'id');
+  },
+  getAllRows: function(){
+    return knex('task').select();
   }
 }
